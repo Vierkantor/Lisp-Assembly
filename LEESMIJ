@@ -1,0 +1,25 @@
+Dit is een minimalistische Lisp-implementatie, geheel geschreven in x86_64-assembly en deze Lisp zelf.
+Het project is geïnspireerd op Jones Forth, een editie van Forth geheel geschreven in (32-bits) x86-assembly,
+en een mooi voorbeeld van literate programming.
+
+Zie lisp.nasm voor de implementatie van de basistaal,
+en swail.lisp voor de code die dit uitbreidt tot een volwaardige Lisp.
+De Makefile geeft je de volgende commando's:
+	$ make # Maak de executable lisp-nasm. 
+	$ make doe # Geef een prompt die Lisp kan uitvoeren.
+	$ make kever # Start lisp-nasm in binnen GDB, met nuttige commando's voor het ontkeveren (zie lisp_gdb.py).
+	$ make proef # Voer een paar zelftests uit.
+
+Benodigdheden:
+	- Een computer met x86_64-processor en Linux.
+	- Een niet te oude versie van NASM, de Netwide Assembler. Versie 2.13 is modern genoeg.
+	- Een linker, bijvoorbeeld `ld` die meegeleverd is met GCC.
+	- (GNU) Make
+	- Optioneel: GDB, the GNU Debugger, met Python3-support, voor ontkevering.
+
+Voorzien van:
+	- Minimalisme
+	- Basissysteem geheel x86_64-assembly
+	- Dynamische scopes
+	- Vuilnisophaling
+	- Configureerbare primitieven

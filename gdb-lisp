@@ -1,0 +1,9 @@
+set disassemble-next-line on
+set disassembly-flavor intel
+source lisp_gdb.py
+break foutmelding
+break kever.klaar_1
+echo \n
+echo Lisp-ontkeveraar opgestart.\n
+echo Runnen met standaardbieb: `(gdb) run <swail.lisp`.\n
+echo Hulpcommando's voor datainspectie: `(gdb) lisp <iets>`.\n
